@@ -9,6 +9,7 @@ import { CommonModule } from '@angular/common';
   styles: ``
 })
 export class ControlFlowComponent {
+  calificacion = 10;
   antojitos: string[] = ['Tacos', 'Tortas', 'Tamales', 'Tostadas', 'Tacos', 'Tortas', 'Tamales', 'Tostadas', 'Tacos', 'Tortas', 'Tamales', 'Tostadas'];
   champions: string[] = ['Yasuo', 'Zed', 'Akali', 'Yone', 'Yasuo', 'Zed', 'Akali', 'Yone', 'Yasuo', 'Zed', 'Akali', 'Yone'];
   usuario = {name:'Papu', puesto:'Desarrollador', admin:true, papu:false};
@@ -46,5 +47,11 @@ export class ControlFlowComponent {
   }
   funcionPapu(){
     this.usuario.papu = !this.usuario.papu;
+  }
+  calificar(option: string){
+    this.calificacion ++ ? option === 'suma' : this.calificacion --;
+  }
+  calificar2(n: number){
+    this.calificacion += n;
   }
 }

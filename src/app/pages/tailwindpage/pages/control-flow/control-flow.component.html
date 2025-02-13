@@ -113,12 +113,38 @@
         </div>
     </div>
 </div>
-
 }
-        
-
-        
-        
+<div class="bg-gray-400 rounded shadow p-2">
+    @switch (calificacion){
+        @case (5) {
+            <p class="bg-red-400 p-2 rounded mr-2">Película zzz</p>
+        }
+        @case(6) {
+            <p class="bg-amber-400 p-2 rounded mr-2">Película mid</p>            
+        }
+        @case(7) {
+            <p class="bg-purple-400 p-2 rounded mr-2">Película regular</p>            
+        }
+        @case(8) {
+            <p class="bg-blue-400 p-2 rounded mr-2">Película buena</p>            
+        }
+        @case(9) {
+            <p class="bg-green-400 p-2 rounded mr-2">Película chida</p>            
+        }
+        @case(10) {
+            <p class="bg-blend-luminosity p-2 rounded mr-2">Película espectacular</p>            
+        }
+        @default {
+            <p class="bg-gray-400 p-2 rounded mr-2">Película no calificada</p>
+        }
+    }
+    <div class="flex flex-row">
+        <button (click)="calificar2(1)" class="bg-green-300 p-2 rounded mt-2 cursor-pointer hover:scale-110 hover:bg-green-900">
+            +
+        </button>
+        <button (click)="calificar2(2)" class="bg-green-300 p-2 rounded mt-2 cursor-pointer hover:scale-110 hover:bg-green-900">
+            -
+        </button>
     </div>
-    
 </div>
+    
